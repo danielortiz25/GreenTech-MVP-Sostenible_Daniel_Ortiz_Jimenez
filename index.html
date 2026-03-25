@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salvemos el Planeta - GreenTech</title>
+
+  <!-- 
+    CSS integrado para simplificar el proyecto.
+    Antes: Bootstrap + Google Fonts + Font Awesome.
+    Ahora: CSS nativo, ligero y sostenible.
+  -->
+  <style>
+
+    /* 
+      Eliminamos Google Fonts.
+      Ahora usamos system fonts (no requieren descarga).
+    */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4fdf4;
+    }
+
+    /* 
+      HERO PRINCIPAL
+      Antes: imagen gigante sin optimizar + clases de Bootstrap.
+      Ahora: imagen optimizada + CSS propio.
+    */
+    .hero {
+      height: 100vh;
+        background: url("img/bosque.webp") center/cover no-repeat;   
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    }
+
+    /* 
+      BOTÓN
+      Antes: dependía de Bootstrap.
+      Ahora: botón nativo, más ligero y accesible.
+    */
+    .btn {
+      margin-top: 20px;
+      background: #28a745;
+      border: none;
+      padding: 15px 40px;
+      font-size: 1.3rem;
+      border-radius: 40px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #1e7e34;
+    }
+
+    /* 
+      FOOTER
+      Antes: generado con jQuery + Moment.js.
+      Ahora: HTML simple + 1 línea de JS nativo.
+    */
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- 
+    Sección principal con imagen optimizada.
+    Eliminamos dependencias externas y clases innecesarias.
+  -->
+  <div class="hero">
+    <h1>Salvemos el Planeta</h1>
+    <p>Únete a la revolución verde de GreenTech.</p>
+    <button class="btn">Quiero ayudar</button>
+  </div>
+
+  <!-- Footer con año dinámico -->
+  <footer>
+    GreenTech Solutions © <span id="year"></span>
+  </footer>
+
+  <!-- 
+    Antes: jQuery + Moment.js (más de 150 KB).
+    Ahora: JavaScript nativo (0 KB).
+  -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
